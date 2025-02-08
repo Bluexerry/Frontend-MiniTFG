@@ -32,7 +32,7 @@ export default function Navbar() {
                                 Ejercicios
                             </NavLink>
                             <NavLink
-                                to="/crearRutinas"
+                                to="/createRoutines"
                                 className={({ isActive }) =>
                                     `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`
                                 }
@@ -84,7 +84,7 @@ export default function Navbar() {
                             <li>
                                 <NavLink
                                     onClick={() => setMenuOpen(false)}
-                                    to="/crearRutinas"
+                                    to="/createRoutines"
                                     className={({ isActive }) =>
                                         `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`
                                     }
@@ -95,7 +95,7 @@ export default function Navbar() {
                             <li>
                                 <NavLink
                                     onClick={() => setMenuOpen(false)}
-                                    to="/comentarios"
+                                    to="/comments"
                                     className={({ isActive }) =>
                                         `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`
                                     }

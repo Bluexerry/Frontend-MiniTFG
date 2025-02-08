@@ -20,7 +20,7 @@ export default function Exercises() {
                 selectedBodyPart && selectedBodyPart !== "Todos"
                     ? `?bodyPart=${encodeURIComponent(selectedBodyPart)}`
                     : "";
-            const response = await fetch(`http://localhost:3000/exercises${query}`);
+            const response = await fetch(`https://backend-minitfg.onrender.com/exercises${query}`);
             const data = await response.json();
             setExercises(data);
         };
@@ -29,7 +29,7 @@ export default function Exercises() {
 
     useEffect(() => {
         const fetchAll = async () => {
-            const response = await fetch(`http://localhost:3000/exercises`);
+            const response = await fetch(`https://backend-minitfg.onrender.com/exercises`);
             const data = await response.json();
             const parts = Array.from(new Set(data.map((ex) => ex.bodyPart))).filter(Boolean);
             setAllBodyParts(parts);

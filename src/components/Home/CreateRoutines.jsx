@@ -16,7 +16,7 @@ export default function Routines() {
     const [cardioExercise, setCardioExercise] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:3000/exercises")
+        fetch("https://backend-minitfg.onrender.com/exercises")
             .then((res) => res.json())
             .then((data) => setExercisesData(data))
             .catch((err) => console.error(err));
@@ -115,7 +115,7 @@ export default function Routines() {
             exercises: [...mainExercises, ...coreExercises, cardioExercise],
         };
         try {
-            await fetch("http://localhost:3000/daily_routine", {
+            await fetch("https://backend-minitfg.onrender.com/daily_routine", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newRoutine),
@@ -152,7 +152,7 @@ export default function Routines() {
             {/* Botón para ver rutinas */}
             <div className="text-center mb-8">
                 <Link
-                    to="/verRutinas"
+                    to="/visualizeRoutines"
                     className="inline-block text-white bg-blue-600 px-4 py-2 rounded shadow hover:bg-blue-700 transition"
                 >
                     Ver Rutinas

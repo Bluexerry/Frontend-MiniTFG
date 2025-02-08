@@ -22,7 +22,7 @@ export default function Footer() {
                             <a href="/rutinas">Rutinas</a>
                         </li>
                         <li className="hover:text-white transition-colors">
-                            <a href="/comentarios">Comentarios</a>
+                            <a href="/comments">Comentarios</a>
                         </li>
                     </ul>
                 </div>

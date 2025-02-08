@@ -11,7 +11,7 @@ export default function VisualizeRoutines() {
 
     // Carga de rutinas
     useEffect(() => {
-        fetch("http://localhost:3000/daily_routine")
+        fetch("https://backend-minitfg.onrender.com/daily_routine")
             .then((res) => res.json())
             .then((data) => setRoutines(data))
             .catch((err) => console.error(err));
@@ -19,7 +19,7 @@ export default function VisualizeRoutines() {
 
     // Carga de todos los ejercicios
     useEffect(() => {
-        fetch("http://localhost:3000/exercises")
+        fetch("https://backend-minitfg.onrender.com/exercises")
             .then((res) => res.json())
             .then((data) => setAllExercises(data))
             .catch((err) => console.error(err));
@@ -27,7 +27,7 @@ export default function VisualizeRoutines() {
 
     const handleDeleteRoutine = async (id) => {
         try {
-            const response = await fetch(`http://localhost:3000/daily_routine/${id}`, {
+            const response = await fetch(`https://backend-minitfg.onrender.com/daily_routine/${id}`, {
                 method: "DELETE",
             });
             if (!response.ok) throw new Error("Error al eliminar la rutina");
@@ -46,7 +46,7 @@ export default function VisualizeRoutines() {
             comment: commentData.comment,
         };
         try {
-            await fetch("http://localhost:3000/comments", {
+            await fetch("https://backend-minitfg.onrender.com/comments", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newComment),

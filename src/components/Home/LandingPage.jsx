@@ -73,7 +73,7 @@ export default function LandingPage() {
                         Explorar Ejercicios
                     </Link>
                     <Link
-                        to="/crearRutinas"
+                        to="/createRoutines"
                         className="bg-green-500 text-white px-6 py-3 rounded shadow hover:bg-green-600 transition"
                     >
                         Crear Rutina

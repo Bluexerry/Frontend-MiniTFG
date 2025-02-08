@@ -16,8 +16,8 @@ function App() {
                     <Routes>
                         <Route path="/exercises" element={<Exercises />} />
                         <Route path="/comments" element={<Comments />} />
-                        <Route path="/crearRutinas" element={<CreateRoutines />} />
-                        <Route path="/verRutinas" element={<VisualizeRoutines />} />
+                        <Route path="/createRoutines" element={<CreateRoutines />} />
+                        <Route path="/visualizeRoutines" element={<VisualizeRoutines />} />
                         <Route path="/" element={<LandingPage />} />
                     </Routes>
                 </main>

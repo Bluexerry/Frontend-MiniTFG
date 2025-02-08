@@ -11,7 +11,7 @@ export default function Comments() {
     const fetchComments = async () => {
         setLoading(true);
         try {
-            const response = await fetch('http://localhost:3000/comments');
+            const response = await fetch('https://backend-minitfg.onrender.com/comments');
             if (!response.ok) throw new Error("Error al obtener comentarios");
             const data = await response.json();
             setComments(data);
@@ -25,7 +25,7 @@ export default function Comments() {
 
     const fetchRoutineById = async (id) => {
         try {
-            const response = await fetch(`http://localhost:3000/daily_routine?id=${id}`);
+            const response = await fetch(`https://backend-minitfg.onrender.com/daily_routine?id=${id}`);
             if (!response.ok) throw new Error("Error al obtener la rutina");
             const data = await response.json();
             setSelectedRoutine(data[0]);
@@ -40,7 +40,7 @@ export default function Comments() {
 
     const confirmDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:3000/comments/${id}`, {
+            const response = await fetch(`https://backend-minitfg.onrender.com/comments/${id}`, {
                 method: 'DELETE',
             });
             if (!response.ok) throw new Error("Error al eliminar el comentario");
